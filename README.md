@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/license.svg" alt="License"></a>
 </p>
 
 # JSON Translation Helper for Laravel
