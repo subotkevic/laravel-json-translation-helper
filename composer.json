@@ -1,0 +1,40 @@
+{
+    "name": "subotkevic/laravel-json-translation-helper",
+    "description": "Searches for translation keys – inserts into JSON translation files.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artur Subotkevič",
+            "email": "artur@subotkevic.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=5.4.x-dev",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Translator\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JsonTranslationHelper\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JsonTranslationHelper\\TranslationHelperServiceProvider"
+            ]
+        }
+    }
+}
