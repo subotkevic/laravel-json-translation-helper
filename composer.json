@@ -1,7 +1,6 @@
 {
     "name": "subotkevic/laravel-json-translation-helper",
     "description": "Searches for translation keys – inserts into JSON translation files.",
-    "type": "project",
     "license": "MIT",
     "authors": [
         {
