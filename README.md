@@ -56,7 +56,10 @@ Finally, to scan your application for missing translation keys just run:
 php artisan translation:scan
 ```
 
+
 ## Customization
+
+### Publishing the configuration
 
 You can change the default paths to scan your application from, the output directory where your JSON translation files are located, and even the file extensions you want to scan from.
 
@@ -67,3 +70,7 @@ php artisan vendor:publish --provider="JsonTranslationHelper\TranslationHelperSe
 ```
 
 Then in the `config/translation-helper.php` you can change default values of `scan_directories`, `file_extensions` and `output_directory`.
+
+### Extend file extensions
+
+You can add more file extensions to `file_extensions` array in the `config/translation-helper.php` configuration file to scan, let's say, `.vue` or `.js` files.
