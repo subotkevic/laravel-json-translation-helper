@@ -1,3 +1,9 @@
+<p align="center">
+<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/subotkevic/laravel-json-translation-helper"><img src="https://poser.pugx.org/subotkevic/laravel-json-translation-helper/license.svg" alt="License"></a>
+</p>
+
 # JSON Translation Helper for Laravel
 JSON Translation Helper scans your project for `__()`, `lang()` translation helper methods and `@lang` directives, then it creates keys in your JSON translation files. 
 
