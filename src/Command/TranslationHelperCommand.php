@@ -56,7 +56,7 @@ class TranslationHelperCommand extends Command
     private function findProjectTranslationsKeys()
     {
         $allKeys = [];
-        $viewsDirectories = config('translation-helper.views_directories');
+        $viewsDirectories = config('translation-helper.scan_directories');
         $fileExtensions = config('translation-helper.file_extensions');
 
         foreach($viewsDirectories as $directory) {
@@ -114,7 +114,7 @@ class TranslationHelperCommand extends Command
      */
     private function getProjectTranslationFiles()
     {
-        $path = config('translation-helper.translations_output');
+        $path = config('translation-helper.output_directory');
         $files = glob("{$path}/*.json", GLOB_BRACE);
 
         return $files;
