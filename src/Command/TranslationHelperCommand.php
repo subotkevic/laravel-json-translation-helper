@@ -85,8 +85,9 @@ class TranslationHelperCommand extends Command
         foreach ($files as $file) {
             $content = $this->getSanitizedContent($file);
 
-            $this->getTranslationKeysFromFunction($keys, 'lang', $content);
-            $this->getTranslationKeysFromFunction($keys, '__', $content);
+            foreach (config('translation-helper.translation_methods') as $translationMethod) {
+                $this->getTranslationKeysFromFunction($keys, $translationMethod, $content);
+            }
         }
     }
 

@@ -23,4 +23,13 @@ return [
      * Directory where your JSON translation files are located.
      */
     'output_directory' => resource_path('lang'),
+
+    /**
+     * Translation helper methods to scan
+     * for in your application's code.
+     */
+    'translation_methods' => [
+        'lang',
+        '__',
+    ],
 ];
