@@ -69,8 +69,36 @@ First, publish the configuration file:
 php artisan vendor:publish --provider="JsonTranslationHelper\TranslationHelperServiceProvider"
 ```
 
-Then in the `config/translation-helper.php` you can change default values of `scan_directories`, `file_extensions` and `output_directory`.
+Then in the `config/translation-helper.php` you can change default values of `scan_directories`, `file_extensions`, `output_directory` and `translation_methods`.
 
-### Extend file extensions
+### Extending file extensions
 
-You can add more file extensions to `file_extensions` array in the `config/translation-helper.php` configuration file to scan, let's say, `.vue` or `.js` files.
+Our package scans only `.php` files out of the box.
+
+You can add more file extensions to `file_extensions` array in the `config/translation-helper.php` configuration file to scan, let's say, `.vue` or `.js` files:
+```
+/**
+ * File extensions to scan from.
+ */
+'file_extensions' => [
+    'php',
+    'js',
+    'vue',
+],
+```
+
+### Modifying translation helper methods
+
+By default our package looks for `lang` and `__` translation helper methods or mixins.
+
+But you can extend, modify, or remove them in the config file by modifying `translation_methods` array:
+```
+/**
+ * Translation helper methods to scan
+ * for in your application's code.
+ */
+'translation_methods' => [
+    'lang',
+    '__',
+],
+```
