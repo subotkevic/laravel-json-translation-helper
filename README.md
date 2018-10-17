@@ -37,14 +37,14 @@ resources/
 
 Make sure that your translation files is valid JSON, otherwise our package will not work:
 
-```
+```json
 {
     "I love programming.": "Me encanta programar."
 }
 ```
 
 If you don't have any translations for now, just **make sure your file is not empty**, but actually an empty JSON object:
-```
+```js
 {}
 ```
 
@@ -76,7 +76,7 @@ Then in the `config/translation-helper.php` you can change default values of `sc
 Our package scans only `.php` files out of the box.
 
 You can add more file extensions to `file_extensions` array in the `config/translation-helper.php` configuration file to scan, let's say, `.vue` or `.js` files:
-```
+```php
 /**
  * File extensions to scan from.
  */
@@ -92,7 +92,7 @@ You can add more file extensions to `file_extensions` array in the `config/trans
 By default our package looks for `lang` and `__` translation helper methods or mixins.
 
 But you can extend, modify, or remove them in the config file by modifying `translation_methods` array:
-```
+```php
 /**
  * Translation helper methods to scan
  * for in your application's code.
