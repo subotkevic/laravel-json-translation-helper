@@ -28,12 +28,12 @@ class TranslationHelperCommand extends Command
 
         foreach ($translationFiles as $file) {
             $translationData = $this->getAlreadyTranslatedKeys($file);
-            $this->line("lang " . str_replace('.json', '', basename($file)));
+            $this->line("Language: " . str_replace('.json', '', basename($file)));
             $added = [];
 
             foreach ($translationKeys as $key) {
                 if (!isset($translationData[$key])) {
-                    $this->warn(" - Added {$key}");
+                    $this->warn(" - Added: {$key}");
                     $translationData[$key] = '';
                     $added[] = $key;
                 }
@@ -41,11 +41,14 @@ class TranslationHelperCommand extends Command
 
             if ($added) {
                 $this->line("Updating translation file...");
+
                 $this->writeNewTranslationFile($file, $translationData);
-                $this->info("Done!");
+
+                $this->info("Translation file have been updated!");
             } else {
                 $this->warn("Nothing new found for this language.");
             }
+
             $this->line("");
         }
     }
