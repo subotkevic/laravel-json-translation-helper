@@ -57,11 +57,9 @@ php artisan translation:scan
 ```
 
 
-## Customization
+## Configuration
 
-### Publishing the configuration
-
-You can change the default paths to scan your application from, the output directory where your JSON translation files are located, and even the file extensions you want to scan from.
+### Publishing configuration
 
 First, publish the configuration file:
 
@@ -69,9 +67,25 @@ First, publish the configuration file:
 php artisan vendor:publish --provider="JsonTranslationHelper\TranslationHelperServiceProvider"
 ```
 
-Then in the `config/translation-helper.php` you can change default values of `scan_directories`, `file_extensions`, `output_directory` and `translation_methods`.
+It will bring you `config/translation-helper.php` configuration file. 
 
-### Extending file extensions
+Read the following sections of what you can configure.
+
+### Directories
+
+To specify where you want to scan for translation strings, just modify `scan_directories` array:
+```php
+/**
+ * Directories to scan for missing translation keys.
+ */
+'scan_directories' => [
+    app_path(),
+    resource_path('views'),
+    resource_path('assets'),
+],
+``` 
+
+### File extensions
 
 Our package scans only `.php` files out of the box.
 
@@ -87,7 +101,7 @@ You can add more file extensions to `file_extensions` array in the `config/trans
 ],
 ```
 
-### Modifying translation helper methods
+### Translation helper methods
 
 By default our package looks for `lang` and `__` translation helper methods or mixins.
 
