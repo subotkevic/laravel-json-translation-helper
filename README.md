@@ -103,7 +103,7 @@ You can add more file extensions to `file_extensions` array in the `config/trans
 
 ### Translation helper methods
 
-By default our package looks for `lang` and `__` translation helper methods or mixins.
+By default our package looks for `lang()` and `__()` translation helper methods and directives.
 
 But you can extend, modify, or remove them in the config file by modifying `translation_methods` array:
 ```php
