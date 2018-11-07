@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists('lang')) {
+if (! function_exists('lang')) {
     /**
      * Translate the given message.
      *
@@ -15,7 +15,7 @@ if ( ! function_exists('lang')) {
     }
 }
 
-if ( ! function_exists('glob_recursive')) {
+if (! function_exists('glob_recursive')) {
     /**
      * Find path names matching a pattern recursively
      *
