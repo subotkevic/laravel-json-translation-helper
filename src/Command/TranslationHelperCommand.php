@@ -102,7 +102,7 @@ class TranslationHelperCommand extends Command
     {
         $matches = [];
 
-        preg_match_all("#{$functionName}\(\'(.*?)\'\)#", $content, $matches);
+        preg_match_all("#{$functionName}\(\s*\'(.*?)\'\s*[\)\,]#", $content, $matches);
 
         if (! empty($matches)) {
             foreach ($matches[1] as $match) {
